@@ -14,7 +14,6 @@ def main():
     amount_no_unknown = df[df.episodes != "Unknown"]['episodes']
     max_amount_episodes = amount_no_unknown.max()
 
-
     ani_dict = df.to_dict(orient='records')
 
     user_genre = input("Welcome to Anime Recommendations\nPlease enter a genre: ").lower()
@@ -31,7 +30,6 @@ def main():
             if user_genre in genres:
                 if isinstance(anime['type'], str) and anime['type'].lower() == user_type:
                     print(anime['name'])
-                
-                
+                         
 if __name__ == "__main__":
     main()
